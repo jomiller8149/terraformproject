@@ -11,3 +11,11 @@ resource "aws_instance" "ec2_example" {
    Name = "Terraform EC2"
   }
 }
+
+resource "aws_ebs_volume" "example" {
+availability_zone = "ap-south-1"
+size = 40
+tags = {
+Name = "HelloWorld"
+}
+}
